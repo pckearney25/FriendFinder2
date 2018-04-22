@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FriendFinder Survey</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <style type="text/css">
+        .jumbotron-friends {
+            background: yellow;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>
+                <i class="far fa-smile jumbotron-friends"></i>
+                <i class="far fa-smile jumbotron-friends"></i> FriendFinder
+            </h1>
+            <hr>
+            <h3>Answer a brief ten-question survey.</h3>
+            <h3>Find a new friend for life.</h3>
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-12">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <strong>The Survey</strong>
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <form id="survey-form" method="POST" role="form">
+
+                            <div class="form-group">
+                                <label for="name">Enter your name:</label>
+                                <input type="text" class="form-control" id="name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="friend_photo">Add a photo link: </label>
+                                <input type="text" class="form-control" id="friend_photo">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="question1">Question 1. You find it difficult to introduce yourself to other people.</label>
+                                <select class="form-control" id="question1">
+                                    <option selected>Choose...</option>
+                                    <option value="1">1 (Strongly Disagree))</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="question2">Question 2. You try to respond to your e-mails as soon as possible and cannot stand a messy
+                                    inbox.
+                                </label>
+                                <select class="form-control" id="question2">
+                                    <option selected>Choose...</option>
+                                    <option value="1">1 (Strongly Disagree))</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="question3">Question 3. Winning a debate matters less to you than making sure no one gets upset.</label>
+                                <select class="form-control" id="question3">
+                                    <option selected>Choose...</option>
+                                    <option value="1">1 (Strongly Disagree))</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="question4">Question 4. You often feel as if you have to justify yourself to other people.</label>
+                                <select class="form-control" id="question4">
+                                    <option selected>Choose...</option>
+                                    <option value="1">1 (Strongly Disagree))</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="question5">Question 5. You do not mind being at the center of attention.</label>
+                                <select class="form-control" id="question5">
+                                    <option selected>Choose...</option>
+                                    <option value="1">1 (Strongly Disagree))</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="question6">Question 6. You consider yourself more practical than creative.</label>
+                                <select class="form-control" id="question6">
+                                    <option selected>Choose...</option>
+                                    <option value="1">1 (Strongly Disagree))</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="question7">Question 7. People can rarely upset you.</label>
+                                <select class="form-control" id="question7">
+                                    <option selected>Choose...</option>
+                                    <option value="1">1 (Strongly Disagree))</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="question8">Question 8. An interesting book or a video game is often better than a social event.</label>
+                                <select class="form-control" id="question8">
+                                    <option selected>Choose...</option>
+                                    <option value="1">1 (Strongly Disagree))</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="question9">Question 9. You often find yourself lost in thought when you are walking in nature.</label>
+                                <select class="form-control" id="question9">
+                                    <option selected>Choose...</option>
+                                    <option value="1">1 (Strongly Disagree))</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="question10">Question 10. You enjoy going to social events that involve dress-up or role-play activities.</label>
+                                <select class="form-control" id="question10">
+                                    <option selected>Choose...</option>
+                                    <option value="1">1 (Strongly Disagree))</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+
+                        </form>
+                        <br>
+                        <div class="text-right">
+                            <button type="submit" class="btn btn-primary btn-md" id="survey-submit">
+                                <i class="far fa-smile"></i> Submit</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <hr>
+        <footer class="footer">
+            <div class="container">
+                <p>
+                    <a href="/api/friends">Show Possible Friends</a> |
+                    <a href="https://github.com/pckearney25/FriendFinder">GitHub Repo</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <!--MODAL HTML-->
+
+    <div class="modal" id="result-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">You Should Meet:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="result-name">Patrick Kearney</p>
+                    <img id="result-img" src="https://i.pinimg.com/originals/79/01/26/7901264da730cd8b5fbd58dd3d542f5d.jpg" style="height:300px;width:300px;"
+                        alt="">
+                </div>
+                <div class="modal-footer ">
+                    <button type="button " class="btn btn-secondary " data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        // Question: What does this code do?
+        $("#survey-submit").on("click", function (event) {
+            event.preventDefault();
+
+            //adds the 
+            var totalSurveyQuestions = 10
+            var surveyScores = [];
+
+            surveyScores.push($("#question1").val());
+            surveyScores.push($("#question2").val());
+            surveyScores.push($("#question3").val());
+            surveyScores.push($("#question4").val());
+            surveyScores.push($("#question5").val());
+            surveyScores.push($("#question6").val());
+            surveyScores.push($("#question7").val());
+            surveyScores.push($("#question8").val());
+            surveyScores.push($("#question9").val());
+            surveyScores.push($("#question10").val());
+
+            console.log(surveyScores)
+
+
+
+            var userSurvey = {
+                name: $("#name").val().trim(),
+                photo: $("#friend_photo").val().trim(),
+                scores: surveyScores,
+            };
+
+            console.log(userSurvey);
+
+            // TODO: sends the userSurvey to the API and displays the bestMatch data in the modal.
+            $.post("/api/friends", userSurvey)
+                .then(function (data) {
+                    console.log(data);
+                    //old-fashioned JavaScript to clear the form
+                    document.getElementById("survey-form").reset();
+
+                    //Insert the results into and show modal.
+                    $("#result-name").text(data.name);
+                    $("#result-img").attr("src", data.photo);
+                    $("#result-modal").modal("show");
+
+
+                });
+        });
+    </script>
+
+</body>
+
+</html>
+
+<!--PCK Notes: Page goes not need a script to execute get or posts. -->
